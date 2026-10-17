@@ -1,0 +1,37 @@
+@import './variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-ice);
+  color: var(--color-navy-dark);
+}
+
+body {
+  font-family: var(--font-latin);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body[lang="ar"] {
+  font-family: var(--font-arabic);
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-ice);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-gray);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rosewood);
+}

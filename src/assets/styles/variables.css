@@ -1,0 +1,23 @@
+:root {
+  /* Legal Edge Alternating Palette Tokens */
+  --color-navy: #1C2D3A;          /* Primary Structural Dark Navy */
+  --color-navy-light: #253949;    /* Elevating Dark Navy Card Surface */
+  --color-slate: #455A64;         /* Subtitles & Secondary Text on Light */
+  --color-slate-light: #94A3B8;   /* Secondary Text on Dark */
+  
+  --color-rosewood: #9B5E6D;      /* Rosewood Primary Accent */
+  --color-rosewood-hover: #834F5C;/* Darker Rosewood Hover */
+  --color-rosewood-soft: rgba(155, 94, 109, 0.15);
+  
+  --color-ice: #F0F2F5;           /* Light Section Background */
+  --color-white: #FFFFFF;         /* Light Card Surface */
+  --color-border-subtle: #E2E8F0;
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+
+  --max-width: 1240px;
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm: 0 2px 8px rgba(28, 45, 58, 0.05);
+
+  --font-latin: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', 'Tajawal', sans-serif;
+}

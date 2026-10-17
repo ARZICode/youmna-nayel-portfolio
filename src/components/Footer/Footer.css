@@ -1,0 +1,65 @@
+.footer-section {
+  padding: 36px 0;
+  background-color: var(--color-navy);
+  border-top: 1px solid rgba(69, 90, 100, 0.3);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94A3B8;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+.footer-credit-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-credit {
+  font-size: 0.825rem;
+  color: #64748B;
+}
+
+.credit-brand {
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.credit-link {
+  color: var(--color-rosewood);
+  font-weight: 600;
+  font-size: 0.825rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.credit-link:hover {
+  color: #FFFFFF;
+}
+
+.instagram-icon-svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.credit-link:hover .instagram-icon-svg {
+  transform: scale(1.15);
+}

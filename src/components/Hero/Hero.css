@@ -1,0 +1,117 @@
+.hero-section {
+  /* Increased top padding so content never gets hidden under the 76px sticky Navbar */
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border-subtle);
+  width: 100%;
+}
+
+.hero-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  /* Centers inner content container */
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 860px;
+  /* Perfect Center Alignment for All Elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 6px;
+  background-color: var(--color-rosewood-soft);
+  color: var(--color-rosewood);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  border: 1px solid rgba(155, 94, 109, 0.25);
+}
+
+.hero-headline {
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+[dir="ar"] .hero-headline {
+  line-height: 1.4;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--color-slate);
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 36px;
+  max-width: 720px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-hero-primary {
+  padding: 14px 28px;
+  background-color: var(--color-rosewood);
+  color: #FFFFFF;
+  font-size: 0.925rem;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-hero-primary:hover {
+  background-color: var(--color-rosewood-hover);
+  transform: translateY(-1px);
+}
+
+.btn-hero-secondary {
+  padding: 14px 28px;
+  border: 1px solid var(--color-slate);
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  font-size: 0.925rem;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-hero-secondary:hover {
+  border-color: var(--color-rosewood);
+  color: var(--color-rosewood);
+  background-color: var(--color-rosewood-soft);
+}
+
+[dir="rtl"] .btn-icon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 2.1rem;
+  }
+}

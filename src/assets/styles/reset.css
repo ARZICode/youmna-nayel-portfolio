@@ -1,0 +1,48 @@
+@import './variables.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--color-ice);
+  color: var(--color-navy);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-latin);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body[lang="ar"] {
+  font-family: var(--font-arabic);
+}
+
+#root, .app-root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Ensure all section wrappers stretch 100% of viewport width */
+section {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
