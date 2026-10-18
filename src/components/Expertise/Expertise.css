@@ -1,23 +1,28 @@
 .expertise-section {
-  padding: 90px 0;
+  padding: clamp(56px, 10vw, 90px) 0;
   background-color: var(--color-ice);
   border-bottom: 1px solid var(--color-border-subtle);
   width: 100%;
+  overflow-x: hidden;
 }
 
 .expertise-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 clamp(16px, 5vw, 32px);
 }
 
-.section-title {
-  font-size: 2rem;
+/* Title: centered with pink underline bar */
+.expertise-heading {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
   font-weight: 800;
+  line-height: 1.2;
   color: var(--color-navy);
-  margin-bottom: 40px;
+  text-align: center;
+  margin: 0 0 clamp(32px, 6vw, 48px);
 }
-.section-title::after {
+
+.expertise-heading::after {
    content: '';
   display: block;
   width: 50px;
@@ -26,18 +31,20 @@
   margin: 12px auto 0 auto;
   border-radius: 2px;
 }
+
 .expertise-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: clamp(16px, 3vw, 24px);
 }
 
 .expertise-card {
-  padding: 32px;
+  padding: clamp(20px, 5vw, 32px);
   background-color: var(--color-white);
   border-radius: 8px;
   border: 1px solid var(--color-border-subtle);
   transition: var(--transition);
+  min-width: 0;
 }
 
 .expertise-card:hover {
@@ -59,14 +66,22 @@
 }
 
 .card-title {
-  font-size: 1.15rem;
+  font-size: clamp(1.05rem, 3.5vw, 1.15rem);
   font-weight: 700;
   color: var(--color-navy);
   margin-bottom: 10px;
+  overflow-wrap: anywhere;
 }
 
 .card-desc {
   font-size: 0.925rem;
   color: var(--color-slate);
   line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .expertise-heading::after {
+    width: 72px;
+  }
 }

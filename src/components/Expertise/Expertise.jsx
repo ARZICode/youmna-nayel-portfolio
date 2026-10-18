@@ -14,7 +14,7 @@ export default function Expertise({ expertise }) {
   return (
     <section id="expertise" className="expertise-section">
       <div className="expertise-container">
-        <h2 className="section-title">{expertise.heading}</h2>
+        <h2 className="expertise-heading">{expertise.heading}</h2>
         <div className="expertise-grid">
           {expertise.items.map((item, idx) => (
             <div key={idx} className="expertise-card">
