@@ -1,34 +1,49 @@
 .experience-section {
-  padding: 90px 0;
+  padding: clamp(56px, 10vw, 90px) 0;
   background-color: var(--color-navy);
   color: #FFFFFF;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .experience-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 clamp(16px, 5vw, 32px);
 }
 
+/* Title: centered with pink underline bar */
 .experience-heading {
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
   font-weight: 800;
+  line-height: 1.2;
   color: #FFFFFF;
-  margin-bottom: 44px;
+  text-align: center;
+  margin: 0 0 clamp(32px, 6vw, 48px);
+}
+
+.experience-heading::after {
+   content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--color-rosewood);
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
 }
 
 .timeline-list {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: clamp(16px, 3vw, 28px);
 }
 
 .timeline-card {
-  padding: 32px;
+  padding: clamp(20px, 5vw, 32px);
   background-color: var(--color-navy-light);
   border-radius: 8px;
   border: 1px solid var(--color-border-dark);
+  min-width: 0;
 }
 
 .timeline-period {
@@ -44,14 +59,15 @@
 }
 
 .timeline-role {
-  font-size: 1.35rem;
+  font-size: clamp(1.1rem, 4vw, 1.35rem);
   font-weight: 800;
   color: #FFFFFF;
   margin-bottom: 4px;
+  overflow-wrap: anywhere;
 }
 
 .timeline-org {
-  font-size: 0.95rem;
+  font-size: clamp(0.88rem, 3vw, 0.95rem);
   font-weight: 600;
   color: var(--color-slate-light);
   margin-bottom: 20px;
@@ -59,6 +75,8 @@
 
 .timeline-points {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -68,9 +86,14 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.95rem;
+  font-size: clamp(0.88rem, 3vw, 0.95rem);
   color: #E2E8F0;
   line-height: 1.6;
+}
+
+.timeline-point span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .timeline-icon {
@@ -81,4 +104,13 @@
 
 [dir="rtl"] .timeline-icon {
   transform: rotate(180deg);
+}
+
+@media (max-width: 480px) {
+  .experience-heading::after {
+    width: 72px;
+  }
+  .timeline-point {
+    gap: 8px;
+  }
 }

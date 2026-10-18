@@ -17,7 +17,15 @@
   color: var(--color-navy);
   margin-bottom: 40px;
 }
-
+.section-title::after {
+   content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--color-rosewood);
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
